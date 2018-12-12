@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+/*
 bool isPrime(long long int* primes, long long int num) {
     bool isPrime = true;
 
@@ -13,14 +13,15 @@ bool isPrime(long long int* primes, long long int num) {
 
     return isPrime;
 }
-
+*/
 
 int main()
 {
-    const int ceil = 10;
+
+    const int ceil = 10001;
     int primeCounter = 4;
     long long int numCounter = 1;
-    long long int primes[ceil-1];
+    long long int primes[ceil];
 
     primes[0] = 2;
     primes[1] = 3;
@@ -40,6 +41,7 @@ int main()
 
             if(isPrime == true) {
                 primes[primeCounter] = numCounter*10 + 1;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
@@ -53,7 +55,8 @@ int main()
             }
 
             if(isPrime == true) {
-                primes[primeCounter] = numCounter*10 + 1;
+                primes[primeCounter] = numCounter*10 + 7;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
@@ -68,13 +71,14 @@ int main()
             }
 
             if(isPrime == true) {
-                primes[primeCounter] = numCounter*10 + 1;
+                primes[primeCounter] = numCounter*10 + 3;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
             isPrime = true;
 
-            for(long long int i=3; i<primeCounter; i++) {
+            for(long long int i=9; i<primeCounter; i++) {
                 if((numCounter*10+9)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -82,7 +86,8 @@ int main()
             }
 
             if(isPrime == true) {
-                primes[primeCounter] = numCounter*10 + 1;
+                primes[primeCounter] = numCounter*10 + 9;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
@@ -98,6 +103,7 @@ int main()
 
             if(isPrime == true) {
                 primes[primeCounter] = numCounter*10 + 1;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
@@ -111,8 +117,10 @@ int main()
             }
 
             if(isPrime == true) {
-                primes[primeCounter] = numCounter*10 + 1;
+                primes[primeCounter] = numCounter*10 + 3;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
+
             }
 
             isPrime = true;
@@ -125,7 +133,8 @@ int main()
             }
 
             if(isPrime == true) {
-                primes[primeCounter] = numCounter*10 + 1;
+                primes[primeCounter] = numCounter*10 + 7;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
@@ -139,7 +148,8 @@ int main()
             }
 
             if(isPrime == true) {
-                primes[primeCounter] = numCounter*10 + 1;
+                primes[primeCounter] = numCounter*10 + 9;
+                //cout<<"added "<<primes[primeCounter]<<endl;
                 primeCounter++;
             }
 
@@ -149,11 +159,11 @@ int main()
         numCounter++;
 
     }
-
-    for(int i=0; i<10; i++) {
+/*
+    for(int i=0; i<ceil; i++) {
         cout<<primes[i]<<endl;
     }
-
+*/
     cout<<primes[ceil-1]<<endl;
 
     return 0;
