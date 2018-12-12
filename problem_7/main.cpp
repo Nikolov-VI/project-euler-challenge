@@ -18,10 +18,10 @@ bool isPrime(long long int* primes, long long int num) {
 int main()
 {
 
-    const int ceil = 10001;
+    int ceil = 10001;
     int primeCounter = 4;
-    long long int numCounter = 1;
-    long long int primes[ceil];
+    int numCounter = 1;
+    long int primes[ceil];
 
     primes[0] = 2;
     primes[1] = 3;
@@ -32,7 +32,7 @@ int main()
 
     while(primeCounter <= ceil) {
         if(numCounter%3 == 0) {
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+1)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -47,7 +47,7 @@ int main()
 
             isPrime = true;
 
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+7)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -63,7 +63,7 @@ int main()
             isPrime = true;
         }
         else if((numCounter+1)%3 == 0) {
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+3)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -78,7 +78,7 @@ int main()
 
             isPrime = true;
 
-            for(long long int i=9; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+9)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -94,7 +94,7 @@ int main()
             isPrime = true;
         }
         else if((numCounter+2)%3 == 0) {
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+1)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -109,7 +109,7 @@ int main()
 
             isPrime = true;
 
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+3)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -125,7 +125,7 @@ int main()
 
             isPrime = true;
 
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+7)%primes[i] == 0) {
                     isPrime = false;
                     break;
@@ -140,7 +140,7 @@ int main()
 
             isPrime = true;
 
-            for(long long int i=3; i<primeCounter; i++) {
+            for(int i=3; i<primeCounter; i++) {
                 if((numCounter*10+9)%primes[i] == 0) {
                     isPrime = false;
                     break;
