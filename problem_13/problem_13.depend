@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1544824538 source:d:\programming\_coding_challenges\project-euler-challenge\problem_13\main.cpp
+	<iostream>
+	<math.h>
+
